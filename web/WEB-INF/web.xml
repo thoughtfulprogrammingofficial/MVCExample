@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>AppName</param-name>
+        <param-value>ServletsDemo</param-value>
+    </context-param>
+    <context-param>
+        <param-name>AppVer</param-name>
+        <param-value>1.0</param-value>
+    </context-param>
+    <filter>
+        <filter-name>RegistartionFilter</filter-name>
+        <filter-class>com.thoughtfulprogramming.RegistartionFilter</filter-class>
+        <init-param>
+            <param-name>Author</param-name>
+            <param-value>Omkar Patil</param-value>
+        </init-param>
+        <init-param>
+            <param-name>AppVersion</param-name>
+            <param-value>1.0</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>RegistartionFilter</filter-name>
+        <servlet-name>RegisterServlet</servlet-name>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <servlet-class>com.thoughtfulprogramming.HelloWorldServlet</servlet-class>
+        <init-param>
+            <param-name>Author</param-name>
+            <param-value>Omkar Patil</param-value>
+        </init-param>
+        <init-param>
+            <param-name>AppVersion</param-name>
+            <param-value>1.0</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.thoughtfulprogramming.RegisterServlet</servlet-class>
+        <init-param>
+            <param-name>Author</param-name>
+            <param-value>Omkar Patil</param-value>
+        </init-param>
+        <init-param>
+            <param-name>AppVersion</param-name>
+            <param-value>1.0</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>HitsCounterServlet</servlet-name>
+        <servlet-class>com.thoughtfulprogramming.HitsCounterServlet</servlet-class>
+        <init-param>
+            <param-name>Author</param-name>
+            <param-value>Omkar Patil</param-value>
+        </init-param>
+        <init-param>
+            <param-name>AppVersion</param-name>
+            <param-value>1.0</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>PrintTablePBServlet</servlet-name>
+        <servlet-class>com.thoughtfulprogramming.PrintTablePBServlet</servlet-class>
+        <init-param>
+            <param-name>Author</param-name>
+            <param-value>Omkar Patil</param-value>
+        </init-param>
+        <init-param>
+            <param-name>AppVersion</param-name>
+            <param-value>1.0</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <url-pattern>/HelloWorldServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HitsCounterServlet</servlet-name>
+        <url-pattern>/HitsCounterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PrintTablePBServlet</servlet-name>
+        <url-pattern>/PrintTablePBServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>3</session-timeout>
+    </session-config>
+</web-app>
